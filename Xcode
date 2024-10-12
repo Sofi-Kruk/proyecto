@@ -1,0 +1,24 @@
+func decimalToBinary(from decimal: Int) -> String {
+    var number = decimal
+    var binary = ""
+
+    while number > 0 {
+        binary = String(number % 2) + binary
+        number /= 2
+    }
+    return binary
+}
+
+func decimalToHex(from dec: Int) -> String {
+    var number1 = dec
+    var hex = ""
+
+    while number1 > 0 {
+        hex = String(number1 % 16) + hex
+        number1 /= 16
+    }
+    return hex
+}
+
+print(decimalToHex(from: 70))
+print(decimalToBinary(from: 70))
